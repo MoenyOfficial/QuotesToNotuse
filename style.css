@@ -16,10 +16,10 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font-body);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 main {
@@ -30,25 +30,29 @@ main {
     align-items: center;
     padding: 2rem;
     position: relative;
+    width: 100%;
 }
 
 .container {
-    max-width: 1000px;
-    width: 100%;
-    text-align: left;
+    max-width: 1400px;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .quote-wrapper {
     overflow: hidden;
     margin-bottom: 2rem;
+    width: 100%;
 }
 
 .quote-text {
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 10vw, 8rem);
-    line-height: 0.9;
+    font-size: clamp(2rem, 8vw, 6.5rem);
+    line-height: 1;
     text-transform: uppercase;
     word-wrap: break-word;
+    width: 100%;
 }
 
 .author-wrapper {

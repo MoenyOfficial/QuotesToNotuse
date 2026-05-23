@@ -60,6 +60,16 @@ function displayQuote(quote, author) {
     quoteTextElement.innerText = quote;
     quoteAuthorElement.innerText = `- ${author}`;
 
+    // Dynamic font size adjustment based on length
+    const length = quote.length;
+    if (length > 100) {
+        quoteTextElement.style.fontSize = 'clamp(1.5rem, 5vw, 3.5rem)';
+    } else if (length > 60) {
+        quoteTextElement.style.fontSize = 'clamp(2rem, 7vw, 5rem)';
+    } else {
+        quoteTextElement.style.fontSize = ''; // Use CSS default
+    }
+
     // Reset visibility
     gsap.set([quoteTextElement, quoteAuthorElement], { opacity: 1 });
 
